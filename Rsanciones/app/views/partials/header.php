@@ -1,0 +1,4 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php echo htmlspecialchars(isset($titulo)?$titulo:'Sistema de Sanciones'); ?></title><link rel="stylesheet" href="css/estilos.css"></head><body>
+<header class="header"><div><h2>Sistema de Registro de Sanciones</h2><small>Gestión disciplinaria escolar</small></div><nav><a href="index.php?url=panel">Panel</a><a href="index.php?url=estudiantes">Estudiantes</a><a href="index.php?url=sanciones">Sanciones</a><a href="index.php?url=reportes">Reportes</a><a href="index.php?url=logout">Salir</a></nav></header><main class="container">
+<?php if(isset($flash)&&$flash): ?><div class="alert <?php echo $flash['type']==='error'?'alert-error':'alert-success'; ?>"><?php echo htmlspecialchars($flash['message']); ?></div><?php endif; ?>
